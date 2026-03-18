@@ -1,0 +1,21 @@
+<main>
+  <div class="playground">
+    <app-pendu-area
+      [errors]="errors"
+      [isWon]="isWon"
+    />
+    <app-zone-enigme
+      [mots]="mots"
+      [guesses]="guesses"
+      [isGameOver]="isGameOver"
+    />
+    <app-proposition-area
+      [guess]="guess"
+      [handleGuessValidate]="handleGuessValidate"
+      [isGameOver]="isGameOver"
+      [reset]="reset"
+    />
+  </div>
+</main>
+
+<router-outlet />
