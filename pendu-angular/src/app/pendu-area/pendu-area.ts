@@ -5,8 +5,13 @@ import {Component, input} from '@angular/core';
   imports: [],
   templateUrl: './pendu-area.html',
   styleUrl: './pendu-area.css',
+  standalone: true
 })
 export class PenduArea {
-  errors = input<string | null>(null)
-  isWon = input<boolean>(false)
+  errors = input.required<string[]>();
+  isWon = input.required<boolean>();
+
+  e(number: number) {
+    return this.errors().length + 1 > number
+  };
 }

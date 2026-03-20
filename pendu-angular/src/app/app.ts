@@ -13,12 +13,12 @@ import {PropositionArea} from './proposition-area/proposition-area';
 export class App {
   protected readonly title = signal('pendu-angular');
 
-  errors: string | null = null;
-  isWon: boolean = false;
-  guesses: string[] = [''];
-  mots: string = '';
-  isGameOver: boolean = false;
-  guess: string = '';
+  errors = signal(['e', 't']);
+  isWon = signal(false);
+  guesses = signal<string[]>(['']);
+  mots = signal<string>('');
+  isGameOver = signal<boolean>(false);
+  guess = signal<string>('');
   handleGuessValidate: () => void = () => {};
   reset: () => void = () => {};
 }

@@ -1,1 +1,7 @@
-<p>proposition-area works!</p>
+@if (isGameOver()) {
+  <div class="replay" >Rejouer</div>
+}
+@else {
+  <input [ngClass]="isGuessFocused() ? 'playerGuess focused' : 'playerGuess'" />
+}
+
