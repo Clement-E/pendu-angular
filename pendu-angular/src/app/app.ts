@@ -1,4 +1,4 @@
-import {Component, signal, WritableSignal} from '@angular/core';
+import {Component, signal} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {PenduArea} from './pendu-area/pendu-area';
 import {ZoneEnigme} from './zone-enigme/zone-enigme';
@@ -16,7 +16,7 @@ export class App {
   errors = signal(['e', 't']);
   isWon = signal(false);
   guesses = signal<string[]>(['']);
-  mots = signal<string>('');
+  mots = signal<string>('yolo mec');
   isGameOver = signal<boolean>(false);
   guess = signal<string>('');
   handleGuessValidate: () => void = () => {};

@@ -1,1 +1,20 @@
-<p>zone-enigme works!</p>
+<div class="summary">
+  @for (mot of motsArray(); track $index) {
+    <div class="mot">
+      @for (letter of mot; track $index) {
+        @let isGuessed = guesses().includes(letter);
+        @let isPunctuation = letter === "'" || letter === ",";
+        @let isRevealed = isGuessed || isPunctuation || isGameOver();
+
+        <div>
+          <div [class]="isRevealed ? 'card revealed' : 'card'">
+            <div class="content">
+              <div class="front"></div>
+              <div class="back">{{ letter.toUpperCase() }}</div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

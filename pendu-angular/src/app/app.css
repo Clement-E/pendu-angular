@@ -14,105 +14,10 @@
     height: 220px;
   }
 
-  .summary {
+  .zone-proposition {
     width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 60px;
-
-    .mot {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      gap: 10px;
-    }
-
-    .letter {
-      width: 40px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 40px;
-
-      &.playable {
-        border-bottom: 2px solid white;
-      }
-
-      &.empty {
-        border-bottom: none;
-      }
-    }
-
-    .unknown {
-      width: 60px;
-      height: 80px;
-      border: 1px solid #e5e4e4;
-      border-radius: 4px;
-      box-shadow: -10px 10px 10px #d4d4d450;
-    }
-
-    .card {
-      position: relative;
-      width: 60px;
-      height: 80px;
-      float: left;
-      perspective: 500px;
-    }
-
-    .content {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      transition: transform 1s;
-      transform-style: preserve-3d;
-    }
-
-    .card.revealed .content {
-      transform: rotateY( 180deg ) ;
-      transition: transform 0.5s;
-    }
-
-    .front,
-    .back {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background: white;
-      text-align: center;
-      font-size: 60px;
-      border-radius: 5px;
-      backface-visibility: hidden;
-    }
-
-    .back {
-      background: #8024e0;
-      color: white;
-      transform: rotateY( 180deg );
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-
-  .guessZone {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .playerGuess {
-      width: 100px;
-      height: 140px;
-      border: 3px solid #8024e0;
-      border-radius: 6px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 80px;
-      padding-left: 55px;
-    }
   }
 
   .replay {
